@@ -17,15 +17,13 @@ print("    Higher: press the Up arrow key.")
 print("    Lower: press the Down arrow key.")
 print("If I'm right, press the enter key!")  
 print("\nWhen ready, press enter!")
-
 input("")
 
-notGuessed = True
 lowBound = 0
 highBound = 100
 guess = random.randint(1,100)
 print("Is your number {}?".format(guess))
-while notGuessed:
+while True:
 	if msvcrt.kbhit():
 		keyPress = msvcrt.getch()
 		if keyPress == chr(27).encode():
